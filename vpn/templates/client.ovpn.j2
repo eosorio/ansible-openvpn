@@ -12,7 +12,7 @@ nobind
 # route-nopull
 persist-key
 persist-tun
-ns-cert-type server
+remote-cert-tls server
 verb 3
 tls-client
 
@@ -32,6 +32,7 @@ tls-client
 </key>
 
 # OpenVPN static key
-<tls-auth>
+# Use tls-auth or tls-crypt at your convenience
+<tls-crypt>
 {{ pfs_key }}
-</tls-auth>
+</tls-crypt>
