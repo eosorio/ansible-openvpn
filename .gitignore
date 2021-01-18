@@ -1,0 +1,6 @@
+inventory
+vpn/files/ca.crt
+vpn/client.crt
+vpn/client.key
+vpn/pfs.key
+
