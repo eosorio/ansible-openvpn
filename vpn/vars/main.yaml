@@ -13,3 +13,5 @@ ca_certificate: "{{ lookup('file', 'files/ca.crt') }}"
 client_certificate: "{{ lookup('file', 'files/client.crt') }}"
 client_key: "{{ lookup('file', 'files/client.key') }}"
 pfs_key: "{{ lookup('file', 'files/pfs.key') }}"
+
+config_prefix: 'my_client_name'
