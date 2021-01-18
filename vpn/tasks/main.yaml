@@ -3,6 +3,7 @@
 
 - name: Create the /usr/local/etc/openvpn/ directory
   file: path=/usr/local/etc/openvpn state=directory mode=0700
+  tags: make_usr_local_etc
 
 - name: Creating OVPN file
   template:
