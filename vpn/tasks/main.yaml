@@ -1,0 +1,10 @@
+---
+# tasks file for vpn
+
+- name: Creating OVPN file
+  template:
+    src:          client.ovpn.j2
+    dest:         "/usr/local/etc/openvpn/{{ config_prefix }}.ovpn"
+    owner:        root
+    group:        root
+    mode:         '0600'

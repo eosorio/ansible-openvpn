@@ -1,0 +1,15 @@
+---
+# vars file for vpn
+
+# udp or tcp
+server_protocol: 'udp'
+
+# VPN server hostname, usually something like vpn.myorg.com
+server_hostname: ''
+server_port: 1194
+
+# Certificates and keys to be embedded in the client configuration file
+ca_certificate: "{{ lookup('file', 'files/ca.crt') }}"
+client_certificate: "{{ lookup('file', 'files/client.crt') }}"
+client_key: "{{ lookup('file', 'files/client.key') }}"
+pfs_key: "{{ lookup('file', 'files/pfs.key') }}"

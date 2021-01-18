@@ -1,0 +1,34 @@
+client
+dev tun
+proto {{ server_protocol }}
+remote {{ server_hostname }} {{ server_port }}
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-RSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256:TLS-ECDHE-RSA-WITH-AES-256-GCM-SHA384:TLS-DHE-RSA-WITH-AES-256-CBC-SHA256
+cipher AES-256-CBC
+auth SHA512
+resolv-retry infinite
+auth-retry none
+nobind
+# route-nopull
+persist-key
+persist-tun
+ns-cert-type server
+verb 3
+tls-client
+
+# CA certificate
+<ca>
+{{ ca_certificate }}
+</ca>
+
+# Client certificate
+<cert>
+</cert>
+
+# Client key
+<key>
+</key>
+
+# OpenVPN static key
+<tls-auth>
+</tls-auth>
