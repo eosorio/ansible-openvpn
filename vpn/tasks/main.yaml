@@ -1,6 +1,9 @@
 ---
 # tasks file for vpn
 
+- name: Create the /usr/local/etc/openvpn/ directory
+  file: path=/usr/local/etc/openvpn state=directory mode=0700
+
 - name: Creating OVPN file
   template:
     src:          client.ovpn.j2
